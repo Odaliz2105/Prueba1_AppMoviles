@@ -1,152 +1,270 @@
+# Anime Explorer 📱✨
 
-````markdown
-# 📸 Photo Gallery App - Ionic + Capacitor
+  PRUEBA 1 BIMESTRE 1 APLICACIONES MOVILES
 
-Aplicación móvil desarrollada con Ionic y Capacitor que permite tomar fotos, almacenarlas localmente y mostrarlas en una galería.
+Anime Explorer es una aplicación móvil desarrollada con Ionic + Angular como proyecto académico para la materia de Aplicaciones Móviles.
 
+La aplicación permite autenticación de usuarios, exploración de anime mediante una API pública, búsqueda dinámica, visualización de detalles, uso de cámara y almacenamiento local de imágenes.
 
-## 🚀 Funcionalidades
+---
 
-✅ Capturar fotos usando la cámara del dispositivo  
-✅ Guardar fotos con nombre personalizado (incluye apellido)  
-✅ Mostrar las fotos en una galería (Tab 3)  
-✅ Mostrar una alerta desde un botón (Tab 1)  
-✅ Guardar fotos en la galería del teléfono (`saveToGallery: true`)  
+# 🚀 Tecnologías utilizadas
 
+* Ionic Framework
+* Angular
+* TypeScript
+* Capacitor
+* Supabase Authentication
+* Jikan API
+* HTML5
+* SCSS
 
-## 🧱 Tecnologías utilizadas
+---
 
-- Ionic Framework
-- Angular
-- Capacitor
-- Android Studio
+# 🎯 Objetivo del proyecto
 
+Desarrollar una aplicación móvil híbrida que cumpla con los siguientes requisitos:
 
-## 📂 Estructura de la App
+* Registro e inicio de sesión
+* Protección de rutas
+* Navegación mediante Tabs
+* Consumo de API externa
+* Búsqueda dinámica
+* Página de detalle
+* Uso de cámara del dispositivo
+* Almacenamiento local
+* Splash screen personalizado
+* Ícono personalizado
 
-- **Tab 1:** Botón para mostrar alerta  
-- **Tab 2:** Captura de fotos  
-- **Tab 3:** Visualización de fotos guardadas  
+---
 
+# 🔐 Autenticación
 
+La autenticación fue implementada utilizando Supabase Authentication.
 
-## ⚙️ Instalación
+## Funcionalidades
 
-Clonar el repositorio:
+* Registro de usuarios
+* Inicio de sesión
+* Cierre de sesión
+* Persistencia de sesión
+* Protección de rutas internas
+
+---
+
+# 🧭 Navegación de la aplicación
+
+La aplicación cuenta con las siguientes pantallas:
+
+## 📌 Tab 1 — Inicio
+
+Pantalla principal con:
+
+* Bienvenida al usuario
+* Información del proyecto
+* Resumen de funcionalidades
+* Navegación rápida
+
+---
+
+## 📷 Tab 2 — Cámara
+
+Permite:
+
+* Tomar fotografías
+* Visualizar imágenes
+* Guardar fotografías localmente
+
+Implementado utilizando Capacitor Camera.
+
+---
+
+## 🖼️ Tab 3 — Galería
+
+Permite:
+
+* Mostrar imágenes guardadas
+* Recuperar imágenes al volver a abrir la aplicación
+* Visualizar almacenamiento local
+
+---
+
+## 🔎 Tab 4 — Catálogo / Búsqueda
+
+Pantalla conectada con Jikan API.
+
+Funciones:
+
+* Buscar anime
+* Mostrar listado dinámico
+* Mostrar imagen y descripción
+* Manejo de errores
+* Loading spinner
+* Página de detalle
+
+---
+
+## 👤 Tab 5 — Perfil
+
+Pantalla de usuario con:
+
+* Información personal
+* Imagen de perfil
+* Botón de cerrar sesión
+
+---
+
+# 🌸 API utilizada
+
+Se utilizó la API pública Jikan API.
+
+## Documentación oficial
+
+[https://docs.api.jikan.moe/](https://docs.api.jikan.moe/)
+
+## Endpoint principal
 
 ```bash
-git clone https://github.com/Odaliz2105/PhothoGallery.git
-cd photo-gallery
-````
+https://api.jikan.moe/v4/anime
+```
 
-Instalar dependencias:
+## Características implementadas
+
+* Consumo HTTP
+* Listado dinámico
+* Búsqueda
+* Página de detalle
+* Manejo de errores
+* Loading
+
+---
+
+# 📷 Cámara y almacenamiento local
+
+La aplicación cumple con el requisito de almacenamiento local:
+
+* Captura de imágenes
+* Persistencia de fotografías
+* Recuperación automática de imágenes
+* Uso de almacenamiento del dispositivo
+
+---
+
+# 🎨 Personalización visual
+
+La aplicación incluye:
+
+* Splash screen personalizado
+* Ícono personalizado
+* Diseño responsive
+* Componentes Ionic estilizados
+
+---
+
+# 🧩 Componentes Ionic utilizados
+
+Se utilizaron los siguientes componentes obligatorios:
+
+* ion-card
+* ion-list
+* ion-item
+* ion-input
+* ion-button
+* ion-icon
+* ion-toast
+* ion-toolbar
+* ion-tabs
+* ion-content
+* ion-header
+
+---
+
+# ⚙️ Instalación del proyecto
+
+## 1. Clonar repositorio
+
+```bash
+git clone URL_DEL_REPOSITORIO
+```
+
+---
+
+## 2. Instalar dependencias
 
 ```bash
 npm install
+```
 
+---
 
-## 🛠️ Ejecutar en navegador
+## 3. Ejecutar aplicación
 
 ```bash
 ionic serve
+```
 
-## 📱 Ejecutar en Android
+---
 
-1. Construir la app:
+# 🔑 Variables de entorno
+
+Crear:
+
+```bash
+src/environments/environment.ts
+```
+
+Agregar:
+
+```ts
+export const environment = {
+  production: false,
+
+  supabaseUrl: 'TU_URL',
+  supabaseKey: 'TU_KEY'
+};
+```
+
+---
+
+# 📱 Generar APK Android
+
+## Build del proyecto
 
 ```bash
 ionic build
 ```
 
-2. Sincronizar con Capacitor:
+## Generar assets
 
 ```bash
-ionic cap sync
+npx capacitor-assets generate
 ```
 
-3. Abrir en Android Studio:
+## Sincronizar Capacitor
 
 ```bash
-ionic cap open android
+npx cap sync
 ```
 
-4. Ejecutar en emulador o dispositivo físico
-
----
-
-## 🔐 Permisos necesarios (Android)
-
-En `AndroidManifest.xml`:
-
-```xml
-<uses-permission android:name="android.permission.CAMERA" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-```
-
----
-
-## 📸 Captura de fotos
-
-Se utiliza el plugin de Capacitor Camera:
-
-```ts
-const capturedPhoto = await Camera.getPhoto({
-  resultType: CameraResultType.Uri,
-  source: CameraSource.Camera,
-  quality: 100,
-  saveToGallery: true,
-});
-```
-
----
-
-## 💾 Guardado de imágenes
-
-Las imágenes se almacenan en el sistema de archivos del dispositivo con un nombre personalizado:
-
-```ts
-const fileName = `Balseca_${new Date().getTime()}.jpeg`;
-```
-
----
-
-## ⚠️ Notas importantes
-
-* Es necesario aceptar los permisos de cámara y almacenamiento en el dispositivo
-* Se recomienda probar en un dispositivo físico
-* Después de cambios:
+## Abrir Android Studio
 
 ```bash
-ionic build
-ionic cap copy
+npx cap open android
 ```
 
 ---
 
-## 👩‍💻 Autor
+# 👤 Autor
 
-**Odaliz Balseca Valencia**
+Proyecto desarrollado por:
+
+* Odaliz Balseca
 
 ---
 
-## 📌 Estado del proyecto
+# 📄 Licencia
 
-✔ Proyecto funcional
-✔ Probado en Android
+Proyecto académico desarrollado con fines educativos.
 
-<img width="720" height="1280" alt="image" src="https://github.com/user-attachments/assets/8f5a2cef-cd8a-4f92-8f41-7660f6b760b6" />
 
-<img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/14e7e3c4-d942-4f9f-8f53-4e076d2b5d26" />
 
-<img width="960" height="2142" alt="image" src="https://github.com/user-attachments/assets/9d1c811b-b93f-44a9-bdf5-f0c341081c0d" />
-
-<img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/86959ecc-fd63-4079-87c9-6b17de2c80ab" />
-
-<img width="899" height="1599" alt="image" src="https://github.com/user-attachments/assets/ce6eac52-fb96-4bb9-ae99-8fe6901a738e" />
-
-<img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/5e6bc1e4-119d-4211-9fb2-d220cc91c1ff" />
-
-<img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/50e07ef5-5f36-480b-9e4b-146bcf5b9856" />
-
-```
