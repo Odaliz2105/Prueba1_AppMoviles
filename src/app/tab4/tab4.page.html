@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Catálogo Anime
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-searchbar
+    [(ngModel)]="textoBuscar"
+    (ionInput)="buscarAnime()"
+    placeholder="Buscar anime">
+  </ion-searchbar>
+
+  <ion-list>
+
+    <ion-card *ngFor="let anime of animes">
+
+      <img [src]="anime.images.jpg.image_url">
+
+      <ion-card-header>
+
+        <ion-card-title>
+          {{ anime.title }}
+        </ion-card-title>
+
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <p>
+          ⭐ Score: {{ anime.score }}
+        </p>
+
+        <p>
+          🎬 Episodios: {{ anime.episodes }}
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </ion-list>
+
+</ion-content>
