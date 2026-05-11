@@ -94,7 +94,7 @@ Funciones:
 
 ## 🔑 Página Login
 
-blob:https://web.whatsapp.com/d1314d46-e105-4c36-bb02-c8a9d5925c18
+<img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/3e0a1593-b69f-49e7-afb2-b8082e97204c" />
 
 Funciones:
 
@@ -133,6 +133,7 @@ Funciones:
 <img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/a46166dc-aa8f-45cd-8fa8-d38bc59b1f6c" />
 
 <img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/9c631633-a64e-4ae0-90b1-84d202081989" />
+
 ---
 
 ## 🖼️ Página Galería
