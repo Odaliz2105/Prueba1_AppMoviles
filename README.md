@@ -94,15 +94,13 @@ Funciones:
 
 ## 🔑 Página Login
 
-<img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/3e0a1593-b69f-49e7-afb2-b8082e97204c" />
-
 Funciones:
 
 * Inicio de sesión con Supabase
 * Validación de usuario
 * Navegación protegida
 
-📸 Agregar captura aquí
+<img width="717" height="1600" alt="image" src="https://github.com/user-attachments/assets/3e0a1593-b69f-49e7-afb2-b8082e97204c" />
 
 ---
 
